@@ -1,12 +1,8 @@
 #!/bin/bash
 setxkbmap -option ctrl:nocaps
+xrandr --output HDMI-2 --mode 1920x1080 --same-as eDP-1 --rate 120
 
-# External monitor
-monitor1=HDMI-2
-
-xrandr --output $monitor1 --same-as eDP-1 
-
-feh --bg-fill $HOME/Downloads/wallpaper/wallhaven-x893w3.jpg
+feh --bg-fill $HOME/Downloads/wallpaper/wallhaven-4ggp17.jpg
 
 # Statusbar loop
 while true; do
@@ -21,10 +17,7 @@ setxkbmap -layout "us,fi" -option "grp:alt_space_toggle"
 
 # Git
 eval "$(ssh-agent -s)"
-# Github
 ssh-add ~/.ssh/gh_arch
-# GitLab
 ssh-add ~/.ssh/gitlab_arch
 
 exec dwm
-
